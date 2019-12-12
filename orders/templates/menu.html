@@ -1,7 +1,5 @@
 {% extends "layout.html" %}
 {% block body%}
-<!--Proyecto 3 Steven Brito tiene el menu -->
-
 <div class='p-3'>
     <table class='table-small w-50 mx-auto text-center '>
         <caption style='caption-side:top;color:white;font-size: 30px;text-align: center'>{{Active_category}}</caption>
@@ -47,7 +45,8 @@
         {% if Columns == 1 %}
         <thead class='thead-light'>
             <tr >
-                <th>Name</th>
+                <th>Ingredientes</th>
+                <th>Ingredientes</th>
             </tr>
         </thead>
         <tbody>
@@ -65,9 +64,9 @@
         {% endif %}
     </table>
 </div>
-{% if Active_category == 'Pizza Regular' or Active_category == 'Sicilian Pizza'  %}
+{% if Active_category == 'Regular Pizza' or Active_category == 'Sicilian Pizza'  %}
     <div class='text-center p-2'>
-        <h6 class='text-warning mx-auto'>Special: Double Cheese + Double Onions + Double Fresh Garlic</h6>
+        <h6 class='text-warning mx-auto'>Special:Double Cheese + Ham + Double Canadian Bacon</h6>
 {% endif %}
 {% if message %}
         <h6 class='text-danger mx-auto '>sfgsg{{message}}</h6>

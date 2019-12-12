@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--Proyecto 3 Steven Brito tiene las ordenes que ve el administrador -->
 <html style="height:100%">
 <head>
     <meta charset="UTF-8">
@@ -24,7 +23,7 @@
             {% if not user.is_superuser %}
             <small><a href="{% url 'my_orders' Order_number %}">Mis Ordenes</a></small> |
             {% endif %}
-            <small><a href="{% url 'logout' %}"> Salir&nbsp;</a></small>
+            <small><a href="{% url 'logout' %}"> Salir &nbsp;</a></small>
         </h4>
     </div>
     {% endif %}
@@ -37,7 +36,7 @@
                 <li class='p-2' >
                     <a href="{% url 'orders_manager' row.user row.order_number  %}"><span>Orden numero: {{row.order_number}} de {{row.user}}</span></a>
                     <a href="{% url 'complete_order' row.user row.order_number  %}"><span class='float-right mx-2 p-1 bg-info rounded text-white'>Completa</span></a>
-                    <span class='float-right'>Estado <span class='text-warning'>{{row.status}}</span></span>
+                    <span class='float-right'>Estado: <span class='text-warning'>{{row.status}}</span></span>
                 </li>
                 {% endfor %}
             </ul>

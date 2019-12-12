@@ -58,7 +58,7 @@ def signin_view(request):
         password=request.POST["password"]
         password2=request.POST["password2"]
         if not password==password2:
-            return render(request,"signin.html",{"message":"Contraseña incorrecta."})
+            return render(request,"signin.html",{"message":"Contraseña incorrecta"})
         user=User.objects.create_user(username,email,password)
         user.first_name=first_name
         user.last_name=last_name

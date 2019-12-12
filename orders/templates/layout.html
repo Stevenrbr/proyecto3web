@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!--Proyecto 3 Steven Brito este tiene el formato para todo el proyecto -->
-
 <html style="height:100%">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <title>T' vo Pizza</title>
+    <title>T' vo pizza</title>
 </head>
 <body style="height:100%">
     <img id='pizza_background' src="{% static 'pizza_back.jpeg' %}">
@@ -25,11 +23,11 @@
             {% if not user.is_superuser %}
             <small><a href="{% url 'my_orders' Order_number %}">Mis Ordenes</a></small> |
             {% endif %}
-            <small><a href="{% url 'logout' %}"> Salir&nbsp;</a></small>
+            <small><a href="{% url 'logout' %}"> Salir &nbsp;</a></small>
         </h4>
     </div>
     {% endif %}
-    <p id='logo' class='text-center m-0 font-weight-bold'><a href="{% url 'index' %}">T 'vo Pizza</a></p>
+    <p id='logo' class='text-center m-0 font-weight-bold'><a href="{% url 'index' %}">T' vo Pizza</a></p>
     <div id='category' class="list-group text-center">
         {% for category in Category %}
         <a href="{% url 'menu' category  %}" class="list-group-item list-group-item-action">{{category}}</a>
